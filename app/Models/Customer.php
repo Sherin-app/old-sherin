@@ -9,7 +9,7 @@ class Customer extends Model
  
     
     protected $fillable = [
-        'firstname','lastname' ,'email', 'phone', 'birth','sexe','store_id','user_id','created_at','updated_at'
+        'firstname','lastname' ,'email', 'phone', 'birth','sexe','store_id','created_at','updated_at'
     ];
 
     public function store()
