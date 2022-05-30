@@ -17,9 +17,9 @@ class CreateCustomersTable extends Migration
             $table->increments('id');
             $table->integer('store_id');
             $table->string('phone');
-            $table->string('email');
-            $table->string('firstName');
-            $table->string('lastName');
+            $table->string('email')->nullable();
+            $table->string('firstName')->nullable();
+            $table->string('lastName')->nullable();
             $table->tinyInteger('sexe')->comment='0:H;1:F';
             $table->date('birth');
             $table->integer('points');
