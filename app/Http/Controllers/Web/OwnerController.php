@@ -149,14 +149,15 @@ class OwnerController extends Controller
         //dd($request->all());
         $request->has('allow_share') ? $allow = 1 : $allow = 0;
         $owner = User::create([
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'phone' => $request->phone,
-            'allow_share' => $request->allow_share,
+            'firstname' => $request['firstname'],
+            'lastname' => $request['lastname'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'phone' => $request['phone'],
+            'allow_share' => $request['allow_share'],
             'is_admin' => 2,
-            'allow_share'=>$allow
+            'allow_share'=>$allow,
+        
         ]);
         // Event::dispatch(new OwnerEvent($owner,$request->password));
         return redirect()->route('admin.owners');
@@ -194,18 +195,17 @@ class OwnerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request->all());
         $owner=User::find($id);
-        $owner->firstname=$request->firstname;
-        $owner->lastname=$request->lastname;
-        $owner->phone=$request->phone;
+        $newOwner['firstname']=$request['firstname'];
+        $newOwner['lastname']=$request['lastname'];
+        $newOwner['phone']=$request['phone'];
         if($request->has('password')){
-            $owner->password=Hash::make($request->password);
+            $newOwner['password']=Hash::make($request['password']);
         }
         if($request->has('allow_share')){
-            $owner->allow_share=1;
+            $newOwner['allow_share']=1;
         }
-        $owner->save();
+        $owner->update($newOwner);
         // Event::dispatch(new OwnerEvent($owner,$request->password));
         return redirect()->route('admin.owners');
     }

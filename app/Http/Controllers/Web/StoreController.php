@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Activity;
 use App\Models\Store;
 use App\User;
+use Illuminate\Support\Carbon;
 
 class StoreController extends Controller
 {
@@ -84,7 +85,9 @@ class StoreController extends Controller
                 'base' => $request->base_calcul,
                 'base_profit' => $request->base_profit,
                 'coeff' => $request->coeff,
-                'tva' => $request->tva
+                'tva' => $request->tva,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]);
         }
         return redirect()->route('admin.stores');
