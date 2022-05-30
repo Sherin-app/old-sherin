@@ -19,6 +19,8 @@ class CreateObjectivesTable extends Migration
             $table->decimal('dayli');
             $table->decimal('weekly');
             $table->decimal('monthly');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

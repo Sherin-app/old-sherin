@@ -29,6 +29,8 @@ class CreateInvoicesTable extends Migration
             $table->tinyInteger('payment_method')->comment='1:Espece;2:check;3:credit card';
             $table->integer('points');
             $table->tinyInteger('status')->comment='0:pending;4:cancelled';
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

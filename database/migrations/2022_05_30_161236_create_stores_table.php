@@ -30,6 +30,8 @@ class CreateStoresTable extends Migration
             $table->text('invoice_message');
             $table->tinyInteger('allow_camp')->default(0);
             $table->string('sender_id');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

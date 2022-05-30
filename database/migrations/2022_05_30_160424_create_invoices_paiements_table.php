@@ -18,6 +18,8 @@ class CreateInvoicesPaiementsTable extends Migration
             $table->integer('invoice_id');
             $table->decimal('amount');
             $table->dateTime('date');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
