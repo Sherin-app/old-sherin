@@ -194,6 +194,7 @@ class OwnerController extends Controller
      */
     public function update(Request $request, $id)
     {
+        dd($request->all());
         $owner=User::find($id);
         $owner->firstname=$request->firstname;
         $owner->lastname=$request->lastname;
