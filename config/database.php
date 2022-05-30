@@ -1,5 +1,5 @@
 <?php
-$url = parse_url("mysql://b9959e987c2b14:59a61530@us-cdbr-east-03.cleardb.com/heroku_a7a05a594bf3d13?reconnect=true");
+$url = parse_url("mysql://b62f7816cf417e:56f24dc7@us-cdbr-east-05.cleardb.net/heroku_655dcaab5086db1?reconnect=true");
 
 $host = $url["host"];
 $username = $url["user"];
