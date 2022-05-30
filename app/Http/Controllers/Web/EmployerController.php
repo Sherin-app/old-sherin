@@ -5,14 +5,11 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
-use App\Events\EmployEvent;
-use App\models\Store;
 use App\Models\Objective;
 use App\Services\InvoiceService;
 use App\Services\CustomerService;
 use App\User;
-use Event;
-
+use App\Models\Store;
 class EmployerController extends Controller
 {
     public function getDashboard()
