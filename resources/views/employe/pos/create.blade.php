@@ -419,7 +419,7 @@
                 var html = '';
                 Object.values(data).forEach(element => {
                     let label = element.label;
-                    path = "{{asset('uploads/products/')}}"+"/"+element.store_id+"/"+element.image;
+                    path = element.image!='' ?  "{{asset('uploads/products/')}}"+"/"+element.store_id+"/"+element.image : "https://via.placeholder.com/100x100";
                     html = html + "<li class='file-box' style='margin: 1%;width: 155px;' onclick='add(" + element.id + "," + "`" + label + "`" + "," + element.price + ")'><div class=''><img  style='width:100%' height='100' src='"+ path + "'></div> <p style='text-align:center;white-space: nowrap;'>" + element.label + "<br>  " + element.price + " MAD</p></li>"
                 });
                 document.getElementById('listProducts').innerHTML = html;

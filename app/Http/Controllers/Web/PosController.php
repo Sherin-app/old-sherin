@@ -42,7 +42,7 @@ class PosController extends Controller
             });
         $products = $this->productService->index()->where('menu_id','!=',null)->groupBy('menu_id');
         $menus = $this->menuService->all();
-        debug($menus->toArray(),$products);
+        dd($menus->toArray(),$products);
         return view('employe.pos.create', ['customers' => $customers,'products'=> $products,'menus'=>$menus ]);
     }
 
