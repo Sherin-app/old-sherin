@@ -17,8 +17,8 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->integer('store_id')->nullable();
             $table->integer('is_admin');
-            $table->string('firstName');
-            $table->string('lastName');
+            $table->string('firstname');
+            $table->string('lastname');
             $table->string('phone');
             $table->tinyInteger('allow_share')->default(1);
             $table->tinyInteger('is_active')->default(1);

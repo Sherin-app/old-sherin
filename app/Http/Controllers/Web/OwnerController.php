@@ -124,7 +124,6 @@ class OwnerController extends Controller
     public function index()
     {
         $owners = User::where('is_admin','=','2')->orderBy('id', 'DESC')->get();
-        //dd($owners);
         return view('admin.owners.list', compact('owners'));
     }
 
@@ -146,7 +145,6 @@ class OwnerController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
         $request->has('allow_share') ? $allow = 1 : $allow = 0;
         $owner = User::create([
             'firstname' => $request['firstname'],
