@@ -22,6 +22,7 @@ class MenuController extends Controller
      */
     public function index()
     {
+        return 'Comming soon';
         return view('admin.menus.index');
     }
 

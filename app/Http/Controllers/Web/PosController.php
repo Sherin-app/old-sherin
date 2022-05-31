@@ -9,6 +9,9 @@ use App\Services\InvoiceService;
 use App\Services\MenuService;
 use App\Services\ProductService;
 use Illuminate\Http\Request;
+
+use function Psy\debug;
+
 class PosController extends Controller
 {
     public $customerService;
@@ -39,6 +42,7 @@ class PosController extends Controller
             });
         $products = $this->productService->index()->where('menu_id','!=',null)->groupBy('menu_id');
         $menus = $this->menuService->all();
+        debug($menus->toArray(),$products);
         return view('employe.pos.create', ['customers' => $customers,'products'=> $products,'menus'=>$menus ]);
     }
 

@@ -28,13 +28,13 @@
                   <div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/dashboard' ? 'down' : 'right' }}"></i></div>
                </a>
                <ul class="sidebar-submenu" style="display: {{ request()->route()->getPrefix() == '/dashboard' ? 'block;' : 'none;' }}">
-                  <li><a class="lan-4 {{ Route::currentRouteName()=='index' ? 'active' : '' }}" href="{{route('admin.owners')}}">{{ trans('sideBar.Propriétaires') }}</a></li>
-                  <li><a class="lan-4 {{ Route::currentRouteName()=='index' ? 'active' : '' }}" href="{{route('admin.activities')}}">{{ trans('sideBar.Activitées') }}</a></li>
-                  <li><a class="lan-5 {{ Route::currentRouteName()=='dashboard-02' ? 'active' : '' }}" href="{{route('admin.stores')}}">{{ trans('sideBar.Magasins') }}</a></li>
-                  <li><a class="lan-5 {{ Route::currentRouteName()=='dashboard-02' ? 'active' : '' }}" href="{{route('admin.employees')}}">{{ trans('sideBar.Employés') }}</a></li>
+                  <li><a class="lan-4 {{ Route::currentRouteName()=='admin.owners' ? 'active' : '' }}" href="{{route('admin.owners')}}">{{ trans('sideBar.Propriétaires') }}</a></li>
+                  <li><a class="lan-4 {{ Route::currentRouteName()=='admin.activities' ? 'active' : '' }}" href="{{route('admin.activities')}}">{{ trans('sideBar.Activitées') }}</a></li>
+                  <li><a class="lan-5 {{ Route::currentRouteName()=='admin.stores' ? 'active' : '' }}" href="{{route('admin.stores')}}">{{ trans('sideBar.Magasins') }}</a></li>
+                  <li><a class="lan-5 {{ Route::currentRouteName()=='admin.employees' ? 'active' : '' }}" href="{{route('admin.employees')}}">{{ trans('sideBar.Employés') }}</a></li>
                   
-                  <li><a class="lan-5 {{ Route::currentRouteName()=='dashboard-02' ? 'active' : '' }}" href="{{route('admin.products')}}">{{ trans('sideBar.Produits') }} {{trans('sideBar.et Prestations')}}</a></li>
-                  <li><a class="lan-5 {{ Route::currentRouteName()=='dashboard-02' ? 'active' : '' }}" href="{{route('admin.menus')}}">{{ trans('Menus Restaurants') }}</a></li>
+                  <li><a class="lan-5 {{ Route::currentRouteName()=='admin.products' ? 'active' : '' }}" href="{{route('admin.products')}}">{{ trans('sideBar.Produits') }} {{trans('sideBar.et Prestations')}}</a></li>
+                  <li><a class="lan-5 {{ Route::currentRouteName()=='admin.menus' ? 'active' : '' }}" href="{{route('admin.menus')}}">{{ trans('Menus Restaurants') }}</a></li>
                </ul> 
             </li>
             <li class="sidebar-main-title">

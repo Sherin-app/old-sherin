@@ -28,13 +28,13 @@
                   <div class="according-menu"><i class="fa fa-angle-<?php echo e(request()->route()->getPrefix() == '/dashboard' ? 'down' : 'right'); ?>"></i></div>
                </a>
                <ul class="sidebar-submenu" style="display: <?php echo e(request()->route()->getPrefix() == '/dashboard' ? 'block;' : 'none;'); ?>">
-                  <li><a class="lan-4 <?php echo e(Route::currentRouteName()=='index' ? 'active' : ''); ?>" href="<?php echo e(route('admin.owners')); ?>"><?php echo e(trans('sideBar.Propriétaires')); ?></a></li>
-                  <li><a class="lan-4 <?php echo e(Route::currentRouteName()=='index' ? 'active' : ''); ?>" href="<?php echo e(route('admin.activities')); ?>"><?php echo e(trans('sideBar.Activitées')); ?></a></li>
-                  <li><a class="lan-5 <?php echo e(Route::currentRouteName()=='dashboard-02' ? 'active' : ''); ?>" href="<?php echo e(route('admin.stores')); ?>"><?php echo e(trans('sideBar.Magasins')); ?></a></li>
-                  <li><a class="lan-5 <?php echo e(Route::currentRouteName()=='dashboard-02' ? 'active' : ''); ?>" href="<?php echo e(route('admin.employees')); ?>"><?php echo e(trans('sideBar.Employés')); ?></a></li>
+                  <li><a class="lan-4 <?php echo e(Route::currentRouteName()=='admin.owners' ? 'active' : ''); ?>" href="<?php echo e(route('admin.owners')); ?>"><?php echo e(trans('sideBar.Propriétaires')); ?></a></li>
+                  <li><a class="lan-4 <?php echo e(Route::currentRouteName()=='admin.activities' ? 'active' : ''); ?>" href="<?php echo e(route('admin.activities')); ?>"><?php echo e(trans('sideBar.Activitées')); ?></a></li>
+                  <li><a class="lan-5 <?php echo e(Route::currentRouteName()=='admin.stores' ? 'active' : ''); ?>" href="<?php echo e(route('admin.stores')); ?>"><?php echo e(trans('sideBar.Magasins')); ?></a></li>
+                  <li><a class="lan-5 <?php echo e(Route::currentRouteName()=='admin.employees' ? 'active' : ''); ?>" href="<?php echo e(route('admin.employees')); ?>"><?php echo e(trans('sideBar.Employés')); ?></a></li>
                   
-                  <li><a class="lan-5 <?php echo e(Route::currentRouteName()=='dashboard-02' ? 'active' : ''); ?>" href="<?php echo e(route('admin.products')); ?>"><?php echo e(trans('sideBar.Produits')); ?> <?php echo e(trans('sideBar.et Prestations')); ?></a></li>
-                  <li><a class="lan-5 <?php echo e(Route::currentRouteName()=='dashboard-02' ? 'active' : ''); ?>" href="<?php echo e(route('admin.menus')); ?>"><?php echo e(trans('Menus Restaurants')); ?></a></li>
+                  <li><a class="lan-5 <?php echo e(Route::currentRouteName()=='admin.products' ? 'active' : ''); ?>" href="<?php echo e(route('admin.products')); ?>"><?php echo e(trans('sideBar.Produits')); ?> <?php echo e(trans('sideBar.et Prestations')); ?></a></li>
+                  <li><a class="lan-5 <?php echo e(Route::currentRouteName()=='admin.menus' ? 'active' : ''); ?>" href="<?php echo e(route('admin.menus')); ?>"><?php echo e(trans('Menus Restaurants')); ?></a></li>
                </ul> 
             </li>
             <li class="sidebar-main-title">
