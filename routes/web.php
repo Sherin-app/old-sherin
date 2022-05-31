@@ -70,9 +70,9 @@ Route::get('/', function () {
     
 });
 
+//app.sherin.loc
 
-
-Route::group(['domain' => 'app.sherin.loc'], function () {
+Route::group(['domain' => 'sherin-old.herokuapp.com'], function () {
     
     //Language Change
 Route::get('lang/{locale}', function ($lang) {
